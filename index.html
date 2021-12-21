@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function main(){
+			var x=document.getElementById('x').value;
+			var k=1;
+			var res=(3.14/2);
+			var iter = document.getElementById('iter').value;
+			for (i=0;i<iter;i++){
+			if(i%2==0){
+				res-=1/(k*Math.pow(x,k))
+			}
+			else{
+				res+=1/(k*Math.pow(x,k))
+			}
+			k+=2;
+		}
+		document.writeln("Ответ: " + res);
+		}
+	</script>
+</head>
+<form onsubmit="main()">
+	<p>Введите значение x больше 1</p>
+	<p><input type ="text" id="x" value="4"></p>
+	<p>Введите количество итераций</p>
+	<p><input type="text" id="iter" value="2"></p>
+	<p><input type="submit"></p>
+</form>
+<body>
+
+</body>
+</html>
